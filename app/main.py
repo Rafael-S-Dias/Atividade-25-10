@@ -10,13 +10,13 @@ def main():
     repository = AlunoRepository(session)
     service = AlunoService(repository)
 
-    service.criar_aluno
+    service.criar_aluno()
 
     print("\nListando todos os alunos: ")
     alunos = service.listar_todos_alunos()
 
     for aluno in alunos:
-        print(f"{aluno.nome} - {aluno.email}")
+        print(f"{aluno.ra} - {aluno.nome} - {aluno.email}")
 
 if __name__ == "__main__":
         main()
